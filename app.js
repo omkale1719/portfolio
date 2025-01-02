@@ -12,6 +12,10 @@ app.use(express.json());
 app.get("/",(req,res)=>{
     res.render("home.ejs");
 })
+app.get("/resume",(req,res)=>{
+    res.render("Resume.ejs");
+})
+
 
 
 const PORT = 8080;

@@ -1,0 +1,141 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #e0eafc, #cfdef3);
+    color: #333;
+    overflow-x: hidden;
+}
+header {
+    background: #2c3e50;
+    color: #ecf0f1;
+    padding: 20px 10px;
+    text-align: center;
+    animation: fadeIn 2s ease-out;
+}
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2rem;
+}
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+.container {
+    width: 100%;
+    max-width: 1500px;
+    margin: 20px ;
+    padding: 20px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: slideIn 1.5s ease-out;
+}
+@keyframes slideIn {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+.section {
+    margin-bottom: 20px;
+}
+.section h2 {
+    border-bottom: 2px solid #2c3e50;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #2c3e50;
+    position: relative;
+}
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -3px;
+    left: 0;
+    width: 50px;
+    height: 2px;
+    background: #1abc9c;
+    animation: underlineExpand 1s ease-out;
+}
+@keyframes underlineExpand {
+    from { width: 0; }
+    to { width: 50px; }
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+.card {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #f9f9f9;
+    animation: zoomIn 1.5s ease-out;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+@keyframes zoomIn {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+.card h3 {
+    margin-top: 0;
+    font-size: 1.2rem;
+    color: #2c3e50;
+}
+footer {
+    text-align: center;
+    padding: 15px 10px;
+    background: #2c3e50;
+    color: #ecf0f1;
+    margin-top: 20px;
+    animation: fadeIn 2s ease-in;
+}
+footer a {
+    color: #1abc9c;
+    text-decoration: none;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    .section h2 {
+        font-size: 1.5rem;
+    }
+    footer {
+        padding: 10px 5px;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        padding: 15px 5px;
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+    header p {
+        font-size: 0.9rem;
+    }
+    .container {
+        padding: 15px;
+    }
+    .grid {
+        grid-template-columns: 1fr;
+    }
+    footer {
+        font-size: 0.9rem;
+    }
+}
